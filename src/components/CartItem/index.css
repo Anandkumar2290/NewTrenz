@@ -76,6 +76,8 @@
 .cart-quantity-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  
 }
 
 .quantity-controller-button {

@@ -8,9 +8,9 @@ const CartSummary = () => (
     {value => {
       const {cartList} = value
       let totalAmout = 0
-      for (const eachItem of cartList) {
+      cartList.forEach(eachItem => {
         totalAmout += eachItem.price * eachItem.quantity
-      }
+      })
       return (
         <div className="cart-summary-container">
           <h1 className="cart-summary-heading">

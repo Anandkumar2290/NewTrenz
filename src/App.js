@@ -67,11 +67,16 @@ class App extends Component {
       return cartItem
     })
     let isAlreadyPresent = false
-    for (const eachItem of cartList) {
+    // for (const eachItem of cartList) {
+    //   if (eachItem.id === product.id) {
+    //     isAlreadyPresent = true
+    //   }
+    // }
+    cartList.forEach(eachItem => {
       if (eachItem.id === product.id) {
         isAlreadyPresent = true
       }
-    }
+    })
     if (isAlreadyPresent === true) {
       this.setState({cartList: updatedCartList})
     } else {

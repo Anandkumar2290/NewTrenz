@@ -1,0 +1,20 @@
+[build]
+  base = "root"
+  command = "npm run build:netlify"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "16"
+  NPM_VERSION = "7"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "npm run build:netlify"
+
+[context.deploy-preview]
+  command = "npm run build:netlify"

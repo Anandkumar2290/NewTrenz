@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": "^10.13 || 12 || 14 || 15",
-    "npm": ">=6"
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
   "dependencies": {
     "@testing-library/jest-dom": "5.11.9",
@@ -31,8 +31,10 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
+    "prebuild": "echo 'Starting build process'",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:netlify": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
     "test": "react-scripts test",
     "lint": "eslint .",
     "lint:fix": "eslint --fix src/",

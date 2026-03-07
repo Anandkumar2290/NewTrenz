@@ -32,9 +32,9 @@
   },
   "scripts": {
     "prebuild": "echo 'Starting build process'",
-    "start": "react-scripts start",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "react-scripts build",
-    "build:netlify": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+    "build:local": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
     "test": "react-scripts test",
     "lint": "eslint .",
     "lint:fix": "eslint --fix src/",

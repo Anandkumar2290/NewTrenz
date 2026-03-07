@@ -1,11 +1,10 @@
 [build]
-  command = "npm run build:netlify"
+  command = "npm run build"
   publish = "build"
 
 [build.environment]
   NODE_VERSION = "16"
   NPM_VERSION = "7"
-  NODE_OPTIONS = "--openssl-legacy-provider"
 
 [[redirects]]
   from = "/*"

@@ -1,5 +1,4 @@
 [build]
-  base = "root"
   command = "npm run build:netlify"
   publish = "build"
 
@@ -12,9 +11,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-[context.production]
-  command = "npm run build:netlify"
-
-[context.deploy-preview]
-  command = "npm run build:netlify"
